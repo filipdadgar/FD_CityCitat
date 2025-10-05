@@ -5,6 +5,18 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Top counter -->
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/placeholder_quote"
+        android:textColor="#444444"
+        android:textSize="14sp"
+        android:paddingBottom="8dp"
+        android:fontFamily="sans-serif-medium" />
+
     <!-- Quote box -->
     <FrameLayout
         android:layout_width="match_parent"
@@ -54,6 +66,15 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/btn_background"
             android:text="@string/next"
+            android:textColor="@color/purple_700" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/btn_background"
+            android:text="@string/delete"
             android:textColor="@color/purple_700" />
 
         <Button
