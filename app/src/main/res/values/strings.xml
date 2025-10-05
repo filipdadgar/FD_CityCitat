@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FD_CityCitat</string>
+    <string name="placeholder_quote">Loading...</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="quit">Quit</string>
+    <string name="no_quotes">No quotes available</string>
+    <string name="prefs_name">quotes_prefs</string>
+    <string name="prefs_key_index">current_index</string>
+</resources>
