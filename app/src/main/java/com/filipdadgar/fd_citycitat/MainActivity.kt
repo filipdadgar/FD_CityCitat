@@ -28,8 +28,9 @@ class MainActivity : ComponentActivity() {
 
         if (quotes.isEmpty()) {
             Toast.makeText(this, getString(R.string.no_quotes), Toast.LENGTH_LONG).show()
-            binding.btnNext.isEnabled = false
-            binding.btnPrevious.isEnabled = false
+            setEnabledWithFade(binding.btnNext, false)
+            setEnabledWithFade(binding.btnPrevious, false)
+            setEnabledWithFade(binding.btnDelete, false)
             return
         }
 
@@ -57,9 +58,9 @@ class MainActivity : ComponentActivity() {
                 if (currentIndex >= quotes.size) currentIndex = quotes.size - 1
                 if (quotes.isEmpty()) {
                     binding.tvQuote.text = getString(R.string.no_quotes)
-                    binding.btnNext.isEnabled = false
-                    binding.btnPrevious.isEnabled = false
-                    binding.btnDelete.isEnabled = false
+                    setEnabledWithFade(binding.btnNext, false)
+                    setEnabledWithFade(binding.btnPrevious, false)
+                    setEnabledWithFade(binding.btnDelete, false)
                     binding.tvCounter.text = getString(R.string.counter_format, 0, 0)
                 } else {
                     updateUI()
@@ -131,8 +132,15 @@ class MainActivity : ComponentActivity() {
 
     private fun updateUI() {
         binding.tvQuote.text = quotes[currentIndex]
-        binding.btnPrevious.isEnabled = currentIndex > 0
-        binding.btnNext.isEnabled = currentIndex < quotes.size - 1
+        setEnabledWithFade(binding.btnPrevious, currentIndex > 0)
+        setEnabledWithFade(binding.btnNext, currentIndex < quotes.size - 1)
+        setEnabledWithFade(binding.btnDelete, true)
         binding.tvCounter.text = getString(R.string.counter_format, currentIndex + 1, quotes.size)
+    }
+
+    private fun setEnabledWithFade(view: android.view.View, enabled: Boolean) {
+        val targetAlpha = if (enabled) 1f else 0.4f
+        view.isEnabled = enabled
+        view.animate().alpha(targetAlpha).setDuration(180).start()
     }
 }
