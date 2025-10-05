@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/btn_background"
             android:text="@string/previous"
-            android:textColor="@color/purple_700" />
+            android:textColor="@color/btn_text_color" />
 
         <Button
             android:id="@+id/btnNext"
@@ -66,7 +66,7 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/btn_background"
             android:text="@string/next"
-            android:textColor="@color/purple_700" />
+            android:textColor="@color/btn_text_color" />
 
         <Button
             android:id="@+id/btnDelete"
@@ -75,7 +75,7 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/btn_background"
             android:text="@string/delete"
-            android:textColor="@color/purple_700" />
+            android:textColor="@color/btn_text_color" />
 
         <Button
             android:id="@+id/btnQuit"
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/btn_background"
             android:text="@string/quit"
-            android:textColor="@color/purple_700" />
+            android:textColor="@color/btn_text_color" />
     </LinearLayout>
 
     <!-- Footer anchored at bottom (floating style) -->
