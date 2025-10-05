@@ -2,7 +2,6 @@
 
 A simple Android app (Kotlin) that displays quotes from an asset file, one at a time. It supports next/previous navigation, deleting quotes, persisting the modified list and the last index in SharedPreferences, and a small Material-styled UI using viewBinding.
 
-screenshots:
 ![screenshot1](screenshot/Citycitat.png) 
 ## Key features
 
